@@ -10,20 +10,25 @@
 
 <div class="container">
 
-    <div class="starter-template">
-        <h2>Welcome: ${message}</h2>
-    </div>
-
     <div class="calculation">
 
         <form action="/calculate" method="post">
 
-            <span>val 1: </span><input type="text" name="val1"/>
-            <span>val 2: </span><input type="text" name="val2"/>
+            <h2><span>input your score: </span></h2><input type="text" name="score"/>
 
             <input type="submit" name="submit" value="Calculate"/>
         </form>
     </div>
+
+    <c:choose>
+        <c:when test="${error != null}">
+
+            <div class="alert alert-danger" style="margin-top: 20px">
+                <strong>Error!</strong> Please check your input and try again.
+            </div>
+
+        </c:when>
+    </c:choose>
 
 </div>
 

@@ -12,7 +12,7 @@
 
     <div class="starter-template">
         <h1>Result: </h1>
-        <h2>${helloResponseDto.message}</h2>
+        <h2>${calculationResponse.result}</h2>
     </div>
 
 </div>

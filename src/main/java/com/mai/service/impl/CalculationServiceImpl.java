@@ -37,6 +37,7 @@ public class CalculationServiceImpl implements CalculationService {
                 .build();
     }
 
+    // формула
     private BigDecimal calculate(Long score) {
 
         // BigDecimal  выполняет операции с такими же BigDecimal объектами, поэтому сначала ты приводишь число к BigDecimal типу

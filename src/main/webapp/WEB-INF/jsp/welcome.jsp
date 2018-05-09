@@ -1,107 +1,35 @@
 <!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-  <style type="text/css">
-
-     .logo {
-       float: left;
-     }
-     nav {
-       float: right;
-     }
-     nav ul {
-       margin: 0;
-       padding: 0;
-       list-style: none;
-     }
-     nav li {
-       display: inline-block; /*один из способов разместить элементы в строку*/
-
-     }
-
-     .container {
-       height: 100%;
-       background-color: #DCDCDC;
-       width: 100%;
-       max-width: 1024px; /*максимальная ширина может иметь другое значение*/
-       padding: 0 15px;
-       margin: 0 auto;
-
-     }
-     .container:after {
-       content: "";
-       display: table;
-       clear: both;
-     }
-     .container {
-       width: 100%;
-       max-width: 1024px;
-       padding: 15px;
-       margin: 0 auto;
-     }
-     .col-1-2 {
-       width: 50%;
-     }
-
-    input[type="text"]:focus {
-     color: #808080;}
-
-    input[type="text"] {
-     border:1px solid #aaa;
-     box-shadow: 0px 0px 3px #ccc, 0 10px 15px #eee inset;
-     border-radius:2px;}
-
-     input[type="submit"] {
-      display: inline-block;
-        width: 15em;
-        font-size: 80%;
-        color: rgba(255,255,255,.9);
-        text-shadow: #2e7ebd 0 1px 2px;
-        text-decoration: none;
-        text-align: center;
-        line-height: 1.1;
-        white-space: pre-line;
-        padding: .7em 0;
-        border: 1px solid;
-        border-color: #60a3d8 #2970a9 #2970a9 #60a3d8;
-        border-radius: 6px;
-        outline: none;
-        background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
-        box-shadow: inset rgba(255,255,255,.5) 1px 1px;
-      }
-      input[type="submit"]:first-line{
-        font-size: 170%;
-        font-weight: 700;
-      }
-      input[type="submit"]:hover {
-        color: rgb(255,255,255);
-        background-image: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
-      }
-      input[type="submit"]:active {
-        color: rgb(255,255,255);
-        border-color: #2970a9;
-        background-image: linear-gradient(#5796c8, #6aa2ce);
-        box-shadow: none;
-      }
-  </style>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
 	<spring:url value="/css/main.css" var="springCss" />
 </head>
 <body>
-<header>
-  <div class="container">
-    <a href="/" class="logo">LOGO</a>
-    <nav>
-      <ul>
-        <li><a href="">Main</a></li>
-        <li><a href="src/main/webapp/WEB-INF/jsp/about.jsp">About</a></li>
-        <li><a href="">Contucts</a></li>
-      </ul>
+
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: #e3f2fd;">
+        <a class="navbar-brand" href="/">logo</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/main">Главная<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">О нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contacts">Контакты</a>
+                </li>
+            </ul>
+        </div>
     </nav>
-  </div>
-</header>
+</div>
 
 <div class="container">
 
@@ -130,15 +58,8 @@
 
 </div>
 
-<script type="text/javascript" src="webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </body>
-<footer>
-<div class="container">
-    <div class="col-1-3"></div>
-    <div class="col-1-3"></div>
-    <div class="col-1-3"></div>
-  </div>
-</footer>
-
 </html>

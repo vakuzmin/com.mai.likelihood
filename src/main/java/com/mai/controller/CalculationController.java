@@ -21,7 +21,6 @@ public class CalculationController {
         this.calculationService = calculationService;
     }
 
-    // that is url that you access from the JSP
     @RequestMapping(value = "/calculate", method = RequestMethod.POST)
     public String calculate(CalculationRequestDto calculationRequestDto, Map<String, Object> model, RedirectAttributes redirectAttributes) {
 

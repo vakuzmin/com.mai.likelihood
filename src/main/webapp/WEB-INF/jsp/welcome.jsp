@@ -34,16 +34,18 @@
 <div class="container">
 
     <div class="calculation">
-         <div class="row">
-             <div class="col-1-2">
-                 <form action="/calculate" method="post">
+        <div class="row">
+            <div class="col-1-2">
+                <form action="/calculate" method="post">
 
-                   <h2><span>Input your result: </span></h2><input type="text" name="score"/><br>  <br>
+                    <h2><span>Input your result: </span></h2><input type="text" name="score"/><br><br>
+                    <input type="hidden" name="clicked" id="clicked_button" value=""/>
 
-                   <input type="submit" name="submit" value="Calculate"/>
-                 </form>
-             </div>
-         </div>
+                    <input type="submit" name="calculate" value="Calculate" onclick="return buttonClick(this)"/>
+                    <input type="submit" name="calculate2" value="Calculate2" onclick="return buttonClick(this)"/>
+                </form>
+            </div>
+        </div>
     </div>
 
     <c:choose>
@@ -55,11 +57,18 @@
 
         </c:when>
     </c:choose>
-
+    
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+<script>
+    function buttonClick(theButton){
+        document.getElementById('clicked_button').value = theButton.name;
+        return true;
+    }
+</script>
 </body>
 </html>

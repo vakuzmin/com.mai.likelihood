@@ -7,7 +7,3 @@ public interface CalculationService {
 
     CalculationResponseDto calculate(CalculationRequestDto calculationRequestDto);
 }
-public interface CalculationService2 {
-
-    CalculationResponseDto calculate2(CalculationRequestDto calculationRequestDto);
-}
